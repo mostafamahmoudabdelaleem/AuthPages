@@ -1,0 +1,235 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(150deg, #498fac, #05668d);
+}
+.card{
+    background-color: white;
+    border-radius: 16px;
+    padding: 24px;
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+    text-align: center;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
+}
+.card .title{
+    font-weight: bold;
+    font-size: 30px;
+    margin: 36px 8px;
+    color: rgba(33, 34, 39, 0.5);
+}
+
+.inline-inputs{
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+}
+.inline .inline-text-input{
+    float: left;
+    width: 50%;
+}
+.inline-text-input input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(33, 34, 39, 0.5);
+    margin: 16px auto;
+    width: 80%;
+    font-size: medium;
+}
+
+.body .text-input input{
+    border: none;
+    outline: none;
+    font-size: medium;
+    border-bottom: 1px solid rgba(33, 34, 39, 0.5);
+    width: 90%;
+    margin: 16px auto;
+    padding: 8px auto;
+}
+.text-input input:focus ,.inline-text-input input:focus{
+    border-bottom: 1px solid #f87060;
+}
+.divider{
+    display: block;
+    border: none;
+    border-bottom: 1px solid rgba(33, 34, 39, 0.5);
+    width: 90%;
+    margin: 24px auto 8px auto;
+    padding: 8px auto;
+}
+
+.social{
+    margin: 8px auto;
+    padding: 8px auto;
+}
+.social p , .switch{
+    font-size: 11px;
+    margin: 10px auto 0 auto;
+    color: rgba(33, 34, 39, 0.9);
+}
+.btn{
+    width: 90%;
+    margin: 24px auto 0 auto;
+    height: 42px;
+    color: white;
+    background-color: #76abc0;
+    border: none;
+    font-size: 20px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgba(5, 102, 141,0.7);
+}
+.btn-eye{
+    display: inline;
+    position: absolute;
+    right: 40px;
+    background-color: transparent;
+    color: rgba(33, 34, 39, 0.5);
+    font-size: 24px;
+    margin: 7px 0;
+    border: none;
+    cursor: pointer;
+}
+.btn-social{
+    background-color: transparent;
+    color: rgba(33, 34, 39, 0.5);
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
+.btn-social:hover{
+    color: rgba(5, 102, 141,0.7);
+}
+.btn-switch{
+    background-color: transparent;
+    color: rgba(33, 34, 39, 0.5);
+    border: none;
+    cursor: pointer;
+    font-size: 11px;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+.btn-switch:hover{
+    color: #05668d;
+}
+.check-input{
+    font-size: small;
+    width: 100%;
+    margin: 8px 18px;
+    text-align: start;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 2.95em;
+    cursor: pointer;
+    padding-top: 1px;
+    color: rgba(33, 34, 39, 0.9);
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 1.25em; height: 1.25em;
+    border: 2px solid #ccc;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+    content: '\2713\0020';
+    position: absolute;
+    top: .15em; left: .22em;
+    font-size: 1.3em;
+    line-height: 0.8;
+    color: #f87060; /* Change the value to change color of checkmark */
+    transition: all .2s;
+    font-family: 'Montserrat', sans-serif;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+    color: #999;
+}
+[type="checkbox"]:disabled + label {
+    color: #aaa;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+    border: 2px dotted blue;
+}
+
+/* hover style just for information */
+label:hover:before {
+    border: 2px solid #4778d9!important;
+}

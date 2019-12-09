@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="auth.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Account Authentication</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card" >
+            <div id="card-title" class="title">Create New Account</div>
+            <div class="body">
+                <form id="registerForm" hidden>
+                    <div class="inline">
+                        <div class="inline-text-input">
+                            <input type="text" name="uname" placeholder="Username" autofocus/>
+                        </div>
+                        <div class="inline-text-input">
+                            <input type="text" name="dname" placeholder="Display name"/>
+                        </div>
+                    </div>
+                    <div class="text-input">
+                        <input type="email" name="email" placeholder="E-mail address"/>
+                    </div>
+                    <div class="text-input">
+                        <input id="pass-field" type="password" name="password" placeholder="Password (Minimum 8 characters)"/>
+                        <!--<button id="pass-toggle" class="btn-eye"><i class="icon ion-ios-eye"></i></button>-->
+                    </div>
+                    <div class="text-input">
+                        <input id="repass-field" type="password" name="re-password" placeholder="Confirm Password"/>
+                    </div>
+                    <div id="show" class="check-input">
+                        <input id="show-pass-input" type="checkbox" name="keep-login">
+                        <label> Show Password</label>
+                    </div>
+                    <button class="btn" type="submit">Create Account</button>
+                    <p class="switch">Login with your account <button id="login-switch" class="btn-switch">Here</button></p>
+                </form>
+                <form id="loginForm">
+                    <div class="text-input">
+                        <input type="email" name="email" placeholder="E-mail address or Username" autofocus/>
+                    </div>
+                    <div class="text-input">
+                        <input type="password" name="password" placeholder="Password (Minimum 8 characters)"/>
+                    </div>
+                    <div id="keep-login" class="check-input">
+                        <input id="keep-login-input" type="checkbox" name="keep-login">
+                        <label> Remember me</label>
+                    </div>
+                    <button class="btn" type="submit">Login</button>
+                    <p class="switch">Create new account <button id="reg-switch" class="btn-switch">Here</button></p>
+                </form>
+                <div class="divider"></div>
+                <div class="social">
+                    <p>Use your social account instead</p>
+                    <button class="btn-social"><i class="icon ion-logo-facebook"></i></button>
+                    <button class="btn-social"><i class="icon ion-logo-twitter"></i></button>
+                    <button class="btn-social"><i class="icon ion-logo-google"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js" lang="js"></script>
+</body>
+</html>
